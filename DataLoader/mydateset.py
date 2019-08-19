@@ -102,7 +102,7 @@ class MyDatasets(data.Dataset):
 
             nir_file, nir_label, vis_file, vis_label = dataset[index]
 
-            return self.transform(nir_file), torch.FloatTensor(nir_label), self.transform(vis_file), torch.FloatTensor(vis_label)
+            return nir_file, nir_label, vis_file, vis_label
 
     def __len__(self):
         """Return the number of images."""
